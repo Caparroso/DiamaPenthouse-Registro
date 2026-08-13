@@ -54,6 +54,15 @@ a {
   background: var(--acid);
 }
 
+.audio-engine {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .grain,
 .ticket-grain {
   position: absolute;
@@ -86,72 +95,50 @@ a {
 }
 
 .lobby-photo,
-.lobby-wash {
+.lobby-wash,
+.lobby-intro-frame {
   position: absolute;
   inset: 0;
 }
 
 .lobby-photo {
-  background-image: url("assets/flyer-stairs.jpg");
+  background-image: url("assets/penthouse-intro.png");
   background-repeat: no-repeat;
-  background-size: auto 150%;
-  background-position: 68% 77%;
-  filter: saturate(1.12) contrast(1.04) blur(0.6px);
-  transform: scale(1.03);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.04) blur(18px) brightness(0.62);
+  transform: scale(1.12);
   animation: lobby-drift 14s ease-in-out infinite alternate;
 }
 
 .lobby-wash {
   z-index: 1;
   background:
-    radial-gradient(circle at 72% 78%, rgba(77, 99, 133, 0.55), transparent 26%),
-    linear-gradient(180deg, rgba(15, 40, 17, 0.18) 0%, rgba(19, 35, 15, 0.08) 46%, rgba(12, 18, 10, 0.84) 100%),
-    linear-gradient(90deg, rgba(20, 51, 22, 0.62), transparent 62%);
+    radial-gradient(circle at 74% 31%, rgba(55, 137, 160, 0.22), transparent 30%),
+    linear-gradient(180deg, rgba(9, 20, 7, 0.08) 0%, rgba(7, 12, 5, 0.12) 58%, rgba(5, 8, 4, 0.78) 100%);
   mix-blend-mode: multiply;
 }
 
-.lobby-header,
-.lobby-copy,
+.lobby-intro-frame {
+  z-index: 2;
+  inset: 0 0 7.5rem;
+  display: grid;
+  place-items: center;
+  padding: 0.6rem;
+}
+
+.lobby-intro-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 1.4rem 3.5rem rgba(0, 0, 0, 0.4));
+  animation: intro-reveal 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .lobby-actions {
   position: absolute;
   z-index: 5;
-}
-
-.lobby-header {
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.2rem;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.lobby-copy {
-  top: 16%;
-  left: 1rem;
-  right: 1rem;
-}
-
-.lobby-copy h1 {
-  margin: 0.35rem 0 0;
-  max-width: 100%;
-  font-size: clamp(4rem, 19vw, 9.5rem);
-  font-weight: 800;
-  letter-spacing: -0.085em;
-  line-height: 0.79;
-}
-
-.lobby-date {
-  margin: 1.2rem 0 0;
-  font-size: clamp(1.15rem, 4.8vw, 2.2rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-}
-
-.lobby-actions {
   left: 1rem;
   right: 1rem;
   bottom: max(1rem, env(safe-area-inset-bottom));
@@ -220,7 +207,7 @@ a {
 .elevator-photo {
   inset-inline: 0;
   z-index: 0;
-  background-image: url("assets/flyer-stairs.jpg");
+  background-image: url("assets/diama-stairs-clean.jpg");
   background-size: auto 165%;
   background-position: 70% 76%;
   filter: saturate(0.94) brightness(0.58) contrast(1.16);
@@ -414,7 +401,20 @@ a {
 
 .site-nav div {
   display: flex;
+  align-items: center;
   gap: 1rem;
+}
+
+.site-nav button {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
 }
 
 .hero-section {
@@ -436,7 +436,7 @@ a {
 }
 
 .hero-photo {
-  background-image: url("assets/flyer-stairs.jpg");
+  background-image: url("assets/diama-stairs-clean.jpg");
   background-size: auto 170%;
   background-position: 69% 77%;
   filter: saturate(1.1) contrast(1.06) blur(0.8px);
@@ -597,7 +597,7 @@ a {
   color: var(--paper);
   background:
     linear-gradient(180deg, rgba(16, 18, 14, 0.1), rgba(16, 18, 14, 0.72)),
-    url("assets/flyer-sink.jpg") center 71% / cover;
+    url("assets/diama-sink-clean.jpg") center 71% / cover;
 }
 
 .location-section h2 {
@@ -740,7 +740,7 @@ a {
   color: var(--paper);
   background:
     linear-gradient(180deg, rgba(20, 53, 25, 0.18), rgba(11, 17, 10, 0.82)),
-    url("assets/flyer-sink.jpg") center / cover;
+    url("assets/diama-sink-clean.jpg") center / cover;
 }
 
 .site-footer > strong {
@@ -787,7 +787,7 @@ a {
 }
 
 .ticket-photo {
-  background-image: url("assets/flyer-stairs.jpg");
+  background-image: url("assets/diama-stairs-clean.jpg");
   background-repeat: no-repeat;
   background-size: auto 165%;
   background-position: 71% 78%;
@@ -997,8 +997,13 @@ a {
 }
 
 @keyframes lobby-drift {
-  from { transform: scale(1.03) translate3d(0, 0, 0); }
-  to { transform: scale(1.08) translate3d(-1.2%, -0.8%, 0); }
+  from { transform: scale(1.12) translate3d(0, 0, 0); }
+  to { transform: scale(1.18) translate3d(-1.2%, -0.8%, 0); }
+}
+
+@keyframes intro-reveal {
+  from { opacity: 0; transform: scale(1.025); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes elevator-rise {
@@ -1027,20 +1032,14 @@ a {
 }
 
 @media (min-width: 760px) {
-  .lobby-header,
   .elevator-header,
   .site-nav {
     padding-inline: 1.6rem;
   }
 
-  .lobby-copy,
   .lobby-actions {
     left: 1.6rem;
     right: 1.6rem;
-  }
-
-  .lobby-copy {
-    top: 13%;
   }
 
   .lobby-actions {
@@ -1106,6 +1105,17 @@ a {
     bottom: 1.25rem;
     width: min(calc(100vw - 2rem), 28rem);
     transform: translateX(-50%);
+  }
+}
+
+@media (min-aspect-ratio: 4 / 3) {
+  .lobby-intro-frame {
+    inset: 0;
+    padding: 0;
+  }
+
+  .lobby-intro-art {
+    object-fit: cover;
   }
 }
 

@@ -6,15 +6,15 @@
     <meta name="theme-color" content="#20351a" />
     <meta
       name="description"
-      content="Diama × Ceniza presentan Diama Penthouse. Sábado 22 de agosto de 2026, CDMX."
+      content="Diama. × Ceniza presentan Diama. Penthouse. Sábado 22 de agosto de 2026, CDMX."
     />
-    <meta property="og:title" content="Diama Penthouse" />
+    <meta property="og:title" content="Diama. Penthouse" />
     <meta property="og:description" content="22 de agosto 2026 · Último piso · CDMX" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/og.png" />
+    <meta property="og:image" content="assets/penthouse-intro.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="assets/og.png" />
-    <title>Diama Penthouse — 22 de agosto 2026</title>
+    <meta name="twitter:image" content="assets/penthouse-intro.png" />
+    <title>Diama. Penthouse — 22 de agosto 2026</title>
     <link rel="icon" href="assets/flyer-sink.jpg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -22,18 +22,14 @@
     <main id="lobby" class="lobby">
       <div class="lobby-photo" aria-hidden="true"></div>
       <div class="lobby-wash" aria-hidden="true"></div>
+      <div class="lobby-intro-frame">
+        <img
+          class="lobby-intro-art"
+          src="assets/penthouse-intro.png"
+          alt="Diama. × Ceniza presentan Diama. Penthouse, 22 de agosto de 2026, CDMX"
+        />
+      </div>
       <div class="grain" aria-hidden="true"></div>
-
-      <header class="lobby-header">
-        <span>DIAMA × CENIZA</span>
-        <span>CDMX / 2026</span>
-      </header>
-
-      <section class="lobby-copy" aria-labelledby="lobby-title">
-        <p class="eyebrow">PRESENTAN</p>
-        <h1 id="lobby-title">DIAMA<br />PENTHOUSE</h1>
-        <p class="lobby-date">SÁBADO 22 DE AGOSTO</p>
-      </section>
 
       <div class="lobby-actions">
         <button id="startRide" class="primary-button" type="button">
@@ -46,8 +42,8 @@
 
     <main id="elevator" class="elevator" hidden>
       <div class="elevator-destination" aria-hidden="true">
-        <span>DIAMA × CENIZA</span>
-        <strong>DIAMA<br />PENTHOUSE</strong>
+        <span>Diama. × CENIZA</span>
+        <strong>Diama.<br />PENTHOUSE</strong>
         <span>22.08.26 · CDMX</span>
       </div>
       <div class="elevator-photo" aria-hidden="true"></div>
@@ -75,10 +71,11 @@
 
     <main id="invitation" class="invitation" hidden>
       <nav class="site-nav" aria-label="Navegación principal">
-        <a href="#top">DIAMA × CENIZA</a>
+        <a href="#top">Diama. × CENIZA</a>
         <div>
           <a href="#ubicacion">UBICACIÓN</a>
           <a href="#registro">REGISTRO</a>
+          <button id="toggleAmbience" type="button" aria-label="Silenciar ambiente">SOUND ON</button>
         </div>
       </nav>
 
@@ -90,7 +87,7 @@
           <span>PRESENTAN</span>
           <span>ÚLTIMO PISO · CDMX</span>
         </div>
-        <h1>DIAMA<br />PENTHOUSE</h1>
+        <h1>Diama.<br />PENTHOUSE</h1>
         <div class="hero-bottomline">
           <strong>22</strong>
           <span>AGOSTO<br />2026</span>
@@ -102,7 +99,7 @@
         <p class="section-index">01 / PENTHOUSE</p>
         <h2>UNA OFICINA<br />HASTA QUE<br />CAE LA NOCHE.</h2>
         <p class="manifesto-copy">
-          Diama y Ceniza toman el último piso. Una noche suspendida sobre la ciudad.
+          Diama. y Ceniza toman el último piso. Una noche suspendida sobre la ciudad.
         </p>
       </section>
 
@@ -110,7 +107,7 @@
         <div class="poster-column">
           <img
             src="assets/flyer-sink.jpg"
-            alt="Flyer oficial de Diama Penthouse con el lineup y fecha 22 de agosto"
+            alt="Flyer oficial de Diama. Penthouse con el lineup y fecha 22 de agosto"
           />
         </div>
         <div class="directory-column">
@@ -204,7 +201,7 @@
       <footer class="site-footer">
         <strong>NOS VEMOS<br />ARRIBA.</strong>
         <div>
-          <span>DIAMA × CENIZA</span>
+          <span>Diama. × CENIZA</span>
           <span>22.08.26 · CDMX</span>
         </div>
       </footer>
@@ -215,7 +212,7 @@
       class="ticket-overlay"
       role="dialog"
       aria-modal="true"
-      aria-label="Boleto de acceso Diama Penthouse"
+      aria-label="Boleto de acceso Diama. Penthouse"
       hidden
     >
       <article class="digital-ticket">
@@ -223,12 +220,12 @@
         <div class="ticket-light" aria-hidden="true"></div>
         <div class="ticket-grain" aria-hidden="true"></div>
         <header class="ticket-header">
-          <span>DIAMA × CENIZA</span>
+          <span>Diama. × CENIZA</span>
           <span>ACCESS / PH</span>
         </header>
         <div class="ticket-title">
           <span>PRESENTAN</span>
-          <strong>DIAMA<br />PENTHOUSE</strong>
+          <strong>Diama.<br />PENTHOUSE</strong>
         </div>
         <div class="ticket-event-line">
           <strong>22</strong>
@@ -258,6 +255,29 @@
       </div>
       <p id="cleanHint" class="clean-hint" hidden>TOMA TU SCREENSHOT · TOCA PARA VOLVER</p>
     </div>
+
+    <audio
+      id="elevatorAudio"
+      class="audio-engine"
+      src="assets/elevator-ambience.mp3"
+      preload="auto"
+      playsinline
+    ></audio>
+    <audio
+      id="bellAudio"
+      class="audio-engine"
+      src="assets/elevator-bell.mp3"
+      preload="auto"
+      playsinline
+    ></audio>
+    <audio
+      id="invitationAmbience"
+      class="audio-engine"
+      src="assets/dk-ambience.mp3"
+      preload="auto"
+      playsinline
+      loop
+    ></audio>
 
     <script src="vendor/qrcode.min.js"></script>
     <script src="script.js"></script>
