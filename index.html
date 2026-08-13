@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#20351a" />
+    <meta
+      name="description"
+      content="Diama × Ceniza presentan Diama Penthouse. Sábado 22 de agosto de 2026, CDMX."
+    />
+    <meta property="og:title" content="Diama Penthouse" />
+    <meta property="og:description" content="22 de agosto 2026 · Último piso · CDMX" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/og.png" />
+    <title>Diama Penthouse — 22 de agosto 2026</title>
+    <link rel="icon" href="assets/flyer-sink.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="lobby" class="lobby">
+      <div class="lobby-photo" aria-hidden="true"></div>
+      <div class="lobby-wash" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <header class="lobby-header">
+        <span>DIAMA × CENIZA</span>
+        <span>CDMX / 2026</span>
+      </header>
+
+      <section class="lobby-copy" aria-labelledby="lobby-title">
+        <p class="eyebrow">PRESENTAN</p>
+        <h1 id="lobby-title">DIAMA<br />PENTHOUSE</h1>
+        <p class="lobby-date">SÁBADO 22 DE AGOSTO</p>
+      </section>
+
+      <div class="lobby-actions">
+        <button id="startRide" class="primary-button" type="button">
+          <span>SUBIR AL PENTHOUSE</span>
+          <span aria-hidden="true">↑</span>
+        </button>
+        <button id="enterSilent" class="text-button" type="button">ENTRAR SIN AUDIO</button>
+      </div>
+    </main>
+
+    <main id="elevator" class="elevator" hidden>
+      <div class="elevator-destination" aria-hidden="true">
+        <span>DIAMA × CENIZA</span>
+        <strong>DIAMA<br />PENTHOUSE</strong>
+        <span>22.08.26 · CDMX</span>
+      </div>
+      <div class="elevator-photo" aria-hidden="true"></div>
+      <div class="elevator-door elevator-door-left" aria-hidden="true"></div>
+      <div class="elevator-door elevator-door-right" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <header class="elevator-header">
+        <span>ASCENSO EN CURSO</span>
+        <button id="toggleSound" type="button" aria-label="Silenciar audio">SOUND ON</button>
+      </header>
+
+      <section class="floor-display" aria-live="polite">
+        <span class="floor-arrow">↑</span>
+        <strong id="floorNumber">PB</strong>
+        <span class="floor-label">PISO</span>
+      </section>
+
+      <div class="ride-progress" aria-label="Progreso del elevador">
+        <span id="rideProgress"></span>
+      </div>
+
+      <button id="skipRide" class="skip-button" type="button" hidden>OMITIR ASCENSO</button>
+    </main>
+
+    <main id="invitation" class="invitation" hidden>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#top">DIAMA × CENIZA</a>
+        <div>
+          <a href="#ubicacion">UBICACIÓN</a>
+          <a href="#registro">REGISTRO</a>
+        </div>
+      </nav>
+
+      <section id="top" class="hero-section">
+        <div class="hero-photo" aria-hidden="true"></div>
+        <div class="hero-color" aria-hidden="true"></div>
+        <div class="grain" aria-hidden="true"></div>
+        <div class="hero-topline">
+          <span>PRESENTAN</span>
+          <span>ÚLTIMO PISO · CDMX</span>
+        </div>
+        <h1>DIAMA<br />PENTHOUSE</h1>
+        <div class="hero-bottomline">
+          <strong>22</strong>
+          <span>AGOSTO<br />2026</span>
+          <a href="#registro">GENERAR ACCESO ↓</a>
+        </div>
+      </section>
+
+      <section class="manifesto-section">
+        <p class="section-index">01 / PENTHOUSE</p>
+        <h2>UNA OFICINA<br />HASTA QUE<br />CAE LA NOCHE.</h2>
+        <p class="manifesto-copy">
+          Diama y Ceniza toman el último piso. Una noche suspendida sobre la ciudad.
+        </p>
+      </section>
+
+      <section class="lineup-section" aria-labelledby="lineup-title">
+        <div class="poster-column">
+          <img
+            src="assets/flyer-sink.jpg"
+            alt="Flyer oficial de Diama Penthouse con el lineup y fecha 22 de agosto"
+          />
+        </div>
+        <div class="directory-column">
+          <p class="section-index">02 / DIRECTORIO</p>
+          <h2 id="lineup-title">LINEUP</h2>
+          <ol>
+            <li><span>07</span><strong>CAPARROSO</strong></li>
+            <li><span>08</span><strong>FIREFLY LIGHT</strong></li>
+            <li><span>09</span><strong>1GALGO</strong></li>
+            <li><span>10</span><strong>GRUPO PRECARIO</strong></li>
+            <li><span>PH</span><strong>CHERRY POPPER</strong></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="ubicacion" class="location-section">
+        <div>
+          <p class="section-index">03 / UBICACIÓN</p>
+          <h2>ÚLTIMO<br />PISO</h2>
+        </div>
+        <div class="address-card">
+          <p>
+            AV. BAJA CALIFORNIA 284<br />
+            HIPÓDROMO CONDESA<br />
+            CUAUHTÉMOC, CDMX
+          </p>
+          <a
+            href="https://maps.app.goo.gl/8osywgt3agSPtbVd9?g_st=iw"
+            target="_blank"
+            rel="noreferrer"
+          >
+            ABRIR EN MAPS ↗
+          </a>
+        </div>
+      </section>
+
+      <section id="registro" class="registration-section">
+        <div class="registration-heading">
+          <p class="section-index">04 / ACCESO</p>
+          <h2>GENERA TU<br />BOLETO.</h2>
+          <p>
+            Tu nombre y token quedarán registrados. Guarda el boleto con una captura de pantalla.
+          </p>
+        </div>
+
+        <form id="registrationForm" class="registration-form">
+          <div class="field-group">
+            <label for="name">NOMBRE PARA LA LISTA</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="TU NOMBRE"
+              minlength="2"
+              maxlength="80"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label for="instagram">INSTAGRAM · OPCIONAL</label>
+            <input
+              id="instagram"
+              name="instagram"
+              type="text"
+              autocomplete="off"
+              placeholder="@USUARIO"
+              maxlength="60"
+            />
+          </div>
+          <input
+            class="honeypot"
+            type="text"
+            name="_gotcha"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
+          <button id="submitRegistration" class="submit-button" type="submit">
+            <span>GENERAR MI ACCESO</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+          <p id="formError" class="form-error" role="alert" hidden></p>
+          <p class="privacy-copy">
+            Al registrarte autorizas guardar estos datos únicamente para el acceso al evento.
+          </p>
+          <button id="restoreTicket" class="restore-ticket" type="button" hidden></button>
+        </form>
+      </section>
+
+      <footer class="site-footer">
+        <strong>NOS VEMOS<br />ARRIBA.</strong>
+        <div>
+          <span>DIAMA × CENIZA</span>
+          <span>22.08.26 · CDMX</span>
+        </div>
+      </footer>
+    </main>
+
+    <div
+      id="ticketOverlay"
+      class="ticket-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Boleto de acceso Diama Penthouse"
+      hidden
+    >
+      <article class="digital-ticket">
+        <div class="ticket-photo" aria-hidden="true"></div>
+        <div class="ticket-light" aria-hidden="true"></div>
+        <div class="ticket-grain" aria-hidden="true"></div>
+        <header class="ticket-header">
+          <span>DIAMA × CENIZA</span>
+          <span>ACCESS / PH</span>
+        </header>
+        <div class="ticket-title">
+          <span>PRESENTAN</span>
+          <strong>DIAMA<br />PENTHOUSE</strong>
+        </div>
+        <div class="ticket-event-line">
+          <strong>22</strong>
+          <span>AGOSTO<br />2026</span>
+          <span>CDMX<br />ÚLTIMO PISO</span>
+        </div>
+        <div class="ticket-holder">
+          <span>INVITADO</span>
+          <strong id="ticketName"></strong>
+        </div>
+        <div class="ticket-access">
+          <div>
+            <span>ACCESS TOKEN</span>
+            <strong id="ticketToken"></strong>
+          </div>
+          <img id="ticketQr" alt="Código QR individual del acceso" />
+        </div>
+        <footer class="ticket-footer">
+          <span>AV. BAJA CALIFORNIA 284</span>
+          <span>NON-TRANSFERABLE / RSVP CONFIRMED</span>
+        </footer>
+      </article>
+
+      <div id="ticketControls" class="ticket-controls">
+        <button id="screenshotMode" type="button">MODO SCREENSHOT</button>
+        <button id="closeTicket" type="button">CERRAR</button>
+      </div>
+      <p id="cleanHint" class="clean-hint" hidden>TOMA TU SCREENSHOT · TOCA PARA VOLVER</p>
+    </div>
+
+    <script src="vendor/qrcode.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
