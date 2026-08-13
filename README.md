@@ -24,13 +24,12 @@ experiencia sonora se desbloquea desde el botón inicial.
 
 ## Imágenes
 
-La portada inicial usa `assets/penthouse-intro.png` como pieza completa. En
-pantallas verticales se conserva toda la composición sobre un fondo expandido;
-en pantallas horizontales ocupa el viewport completo.
-
 Las secciones con texto usan las fotografías limpias
 `assets/diama-stairs-clean.jpg` y `assets/diama-sink-clean.jpg`. El flyer oficial
 con lineup se conserva completo dentro de la sección **LINEUP**.
+
+En celular, el título principal reduce su escala para no salirse de la pantalla
+y el flyer del lineup se muestra completo, sin recortar los laterales.
 
 ## Marca
 
@@ -64,7 +63,7 @@ Formspree recibe nombre, Instagram opcional, token, fecha de registro y evento.
 
 ## Vista previa al compartir
 
-`assets/penthouse-intro.png` es la tarjeta social provisional. Cuando tengas la URL final de GitHub
+`assets/flyer-sink.jpg` es la tarjeta social provisional. Cuando tengas la URL final de GitHub
 Pages, reemplaza en `index.html` el valor relativo de `og:image` y
 `twitter:image` por la URL completa de esa imagen para mejorar la vista previa
 en WhatsApp, iMessage y redes sociales.

@@ -11,25 +11,29 @@
     <meta property="og:title" content="Diama. Penthouse" />
     <meta property="og:description" content="22 de agosto 2026 · Último piso · CDMX" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/penthouse-intro.png" />
+    <meta property="og:image" content="assets/flyer-sink.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="assets/penthouse-intro.png" />
+    <meta name="twitter:image" content="assets/flyer-sink.jpg" />
     <title>Diama. Penthouse — 22 de agosto 2026</title>
     <link rel="icon" href="assets/flyer-sink.jpg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260812-mobile" />
   </head>
   <body>
     <main id="lobby" class="lobby">
       <div class="lobby-photo" aria-hidden="true"></div>
       <div class="lobby-wash" aria-hidden="true"></div>
-      <div class="lobby-intro-frame">
-        <img
-          class="lobby-intro-art"
-          src="assets/penthouse-intro.png"
-          alt="Diama. × Ceniza presentan Diama. Penthouse, 22 de agosto de 2026, CDMX"
-        />
-      </div>
       <div class="grain" aria-hidden="true"></div>
+
+      <header class="lobby-header">
+        <span>Diama. × CENIZA</span>
+        <span>CDMX / 2026</span>
+      </header>
+
+      <section class="lobby-copy" aria-labelledby="lobby-title">
+        <p class="eyebrow">PRESENTAN</p>
+        <h1 id="lobby-title">Diama.<br />PENTHOUSE</h1>
+        <p class="lobby-date">SÁBADO 22 DE AGOSTO</p>
+      </section>
 
       <div class="lobby-actions">
         <button id="startRide" class="primary-button" type="button">
@@ -280,6 +284,6 @@
     ></audio>
 
     <script src="vendor/qrcode.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260812-mobile"></script>
   </body>
 </html>
