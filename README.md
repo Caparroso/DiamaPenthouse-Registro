@@ -28,6 +28,9 @@ Las secciones con texto usan las fotografías limpias
 `assets/diama-stairs-clean.jpg` y `assets/diama-sink-clean.jpg`. El flyer oficial
 con lineup se conserva completo dentro de la sección **LINEUP**.
 
+El lineup confirmado es: Fedra, Grupo Precario, íA, Caparroso, Firefly light y
+1galgo.
+
 En celular, el título principal reduce su escala para no salirse de la pantalla
 y el flyer del lineup se muestra completo, sin recortar los laterales.
 
@@ -63,7 +66,7 @@ Formspree recibe nombre, Instagram opcional, token, fecha de registro y evento.
 
 ## Vista previa al compartir
 
-`assets/flyer-sink.jpg` es la tarjeta social provisional. Cuando tengas la URL final de GitHub
+`assets/flyer-final.jpg` es la tarjeta social provisional. Cuando tengas la URL final de GitHub
 Pages, reemplaza en `index.html` el valor relativo de `og:image` y
 `twitter:image` por la URL completa de esa imagen para mejorar la vista previa
 en WhatsApp, iMessage y redes sociales.
