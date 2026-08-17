@@ -15,8 +15,14 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="assets/flyer-final.jpg" />
     <title>Diama. Penthouse — 22 de agosto 2026</title>
-    <link rel="icon" href="assets/flyer-final.jpg" />
-    <link rel="stylesheet" href="styles.css?v=20260816-lineup" />
+    <link rel="icon" href="assets/diama-logo.png" />
+    <link
+      rel="preload"
+      href="assets/diama-stairs-clean.jpg"
+      as="image"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260817-cellular" />
   </head>
   <body>
     <main id="lobby" class="lobby">
@@ -112,6 +118,9 @@
           <img
             src="assets/flyer-final.jpg"
             alt="Flyer oficial de Diama. Penthouse con Fedra, Grupo Precario, íA, Caparroso, Firefly light y 1galgo"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
           />
         </div>
         <div class="directory-column">
@@ -265,26 +274,26 @@
       id="elevatorAudio"
       class="audio-engine"
       src="assets/elevator-ambience.mp3"
-      preload="auto"
+      preload="none"
       playsinline
     ></audio>
     <audio
       id="bellAudio"
       class="audio-engine"
       src="assets/elevator-bell.mp3"
-      preload="auto"
+      preload="none"
       playsinline
     ></audio>
     <audio
       id="invitationAmbience"
       class="audio-engine"
       src="assets/dk-ambience.mp3"
-      preload="auto"
+      preload="none"
       playsinline
       loop
     ></audio>
 
     <script src="vendor/qrcode.min.js"></script>
-    <script src="script.js?v=20260816-lineup"></script>
+    <script src="script.js?v=20260817-cellular"></script>
   </body>
 </html>

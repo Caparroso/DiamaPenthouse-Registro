@@ -22,6 +22,10 @@ No requiere instalar Node, npm ni dependencias.
 Los navegadores móviles exigen un primer toque para permitir audio; por eso la
 experiencia sonora se desbloquea desde el botón inicial.
 
+Para conexiones móviles, los tres audios se cargan únicamente después de la
+interacción del usuario. La portada tiene prioridad y el flyer completo se
+carga de forma diferida cuando la persona se acerca a la sección de lineup.
+
 ## Imágenes
 
 Las secciones con texto usan las fotografías limpias
