@@ -155,9 +155,23 @@ a {
 
 .lobby-date {
   margin: 1.2rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.8rem;
   font-size: clamp(1.15rem, 4.8vw, 2.2rem);
   font-weight: 800;
   letter-spacing: -0.04em;
+}
+
+.lobby-date time {
+  padding: 0.36em 0.52em 0.32em;
+  color: var(--ink);
+  background: var(--acid);
+  font-size: 0.58em;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
 .lobby-actions {
@@ -526,6 +540,18 @@ a {
   text-align: right;
 }
 
+.hero-date-meta time {
+  display: block;
+  width: max-content;
+  margin-top: 0.55rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.62);
+  padding-top: 0.38rem;
+  color: var(--acid);
+  font-size: 1.12em;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
 .manifesto-section {
   min-height: 92svh;
   display: grid;
@@ -633,6 +659,37 @@ a {
   color: var(--ink);
   background: rgba(245, 246, 233, 0.9);
   backdrop-filter: blur(16px);
+}
+
+.event-schedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.9rem;
+}
+
+.event-schedule > span:last-child {
+  text-align: right;
+}
+
+.event-schedule small,
+.event-schedule strong {
+  display: block;
+}
+
+.event-schedule small {
+  margin-bottom: 0.32rem;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.event-schedule strong {
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
 }
 
 .address-card p {

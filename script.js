@@ -249,7 +249,7 @@
 
     try {
       elements.ticketQr.src = await window.QRCode.toDataURL(
-        `Diama. PENTHOUSE\nTOKEN: ${ticket.token}`,
+        `Diama. PENTHOUSE\n22 AGO 2026 · 7:30 PM\nTOKEN: ${ticket.token}`,
         {
           errorCorrectionLevel: "H",
           margin: 2,
@@ -327,7 +327,7 @@
     submission.append("instagram", nextTicket.instagram || "—");
     submission.append("access_token", nextTicket.token);
     submission.append("registered_at", nextTicket.registeredAt);
-    submission.append("event", "Diama. Penthouse — 22 de agosto 2026");
+    submission.append("event", "Diama. Penthouse — 22 de agosto 2026 — 7:30 PM");
     submission.append("subject", `Nuevo acceso ${nextTicket.token}`);
     submission.append("_gotcha", gotcha);
 
