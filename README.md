@@ -1,76 +1,24 @@
-# Diama. Penthouse — versión estática
+# La Merecida Burger
 
-Esta carpeta contiene la invitación completa y puede abrirse directamente en
-VS Code con **Live Server**.
+Base estática optimizada para GitHub Pages. Incluye el dominio personalizado y 27 imágenes de producto en formato WebP, organizadas en hamburguesas, Baby burgers, fries y postres.
 
-## Abrir localmente
+La versión actual renderiza directamente como HTML y JavaScript local. No depende de React, Babel ni CDNs de JavaScript para mostrar el contenido inicial.
 
-1. Abre esta carpeta en VS Code.
-2. Haz clic derecho sobre `index.html`.
-3. Selecciona **Open with Live Server**.
+Base web estática para GitHub Pages.
 
-No requiere instalar Node, npm ni dependencias.
+## Estructura
 
-## Audio
+- `index.html`: contenido, estilos y configuración principal.
+- `support.js`: comportamiento de los componentes de la página.
+- `image-slot.js`: presentación de los espacios gráficos.
+- `assets/`: imágenes que utiliza el sitio.
 
-- El botón **SUBIR AL PENTHOUSE** activa el sonido del ascensor.
-- El bell suena un segundo antes de llegar a `PH`.
-- Al entrar a la invitación comienza `assets/dk-ambience.mp3` en loop.
-- El ambiente se pausa al cambiar de pestaña o salir de la página y continúa al volver.
-- El control **SOUND ON / SOUND OFF** también está disponible dentro de la invitación.
+## Publicar en GitHub Pages
 
-Los navegadores móviles exigen un primer toque para permitir audio; por eso la
-experiencia sonora se desbloquea desde el botón inicial.
+Sube todo el contenido de esta carpeta a la raíz del repositorio. Después abre **Settings → Pages**, selecciona **Deploy from a branch**, elige `main` y `/ (root)`, y guarda.
 
-Para conexiones móviles, los tres audios se cargan únicamente después de la
-interacción del usuario. La portada tiene prioridad y el flyer completo se
-carga de forma diferida cuando la persona se acerca a la sección de lineup.
+## Actualizaciones
 
-## Imágenes
+Mantén las rutas relativas, por ejemplo `assets/imagen.webp`, para que el sitio funcione tanto en GitHub Pages como en una dirección propia.
 
-Las secciones con texto usan las fotografías limpias
-`assets/diama-stairs-clean.jpg` y `assets/diama-sink-clean.jpg`. El flyer oficial
-con lineup se conserva completo dentro de la sección **LINEUP**.
-
-El lineup confirmado es: Fedra, Grupo Precario, íA, Caparroso, Firefly light y
-1galgo.
-
-En celular, el título principal reduce su escala para no salirse de la pantalla
-y el flyer del lineup se muestra completo, sin recortar los laterales.
-
-## Marca
-
-La marca siempre se escribe **Diama.**: `D` mayúscula, resto en minúsculas y
-punto final obligatorio. El wordmark oficial está incluido como
-`assets/diama-logo.png`.
-
-## Subir a GitHub Pages
-
-Sube todo el contenido de esta carpeta conservando la estructura:
-
-```text
-index.html
-styles.css
-script.js
-assets/
-vendor/
-```
-
-Después activa GitHub Pages desde la rama y carpeta donde subiste los archivos.
-
-## Registro
-
-El formulario está conectado a:
-
-```text
-https://formspree.io/f/xeajkvqp
-```
-
-Formspree recibe nombre, Instagram opcional, token, fecha de registro y evento.
-
-## Vista previa al compartir
-
-`assets/flyer-final.jpg` es la tarjeta social provisional. Cuando tengas la URL final de GitHub
-Pages, reemplaza en `index.html` el valor relativo de `og:image` y
-`twitter:image` por la URL completa de esa imagen para mejorar la vista previa
-en WhatsApp, iMessage y redes sociales.
+Esta versión no contiene recursos Base64, no muestra `Unpacking…` y no reconstruye el documento al abrirlo.

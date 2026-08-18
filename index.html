@@ -1,299 +1,619 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#20351a" />
-    <meta
-      name="description"
-      content="Diama. × Ceniza presentan Diama. Penthouse. Sábado 22 de agosto de 2026, CDMX."
-    />
-    <meta property="og:title" content="Diama. Penthouse" />
-    <meta property="og:description" content="22 de agosto 2026 · Último piso · CDMX" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/flyer-final.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="assets/flyer-final.jpg" />
-    <title>Diama. Penthouse — 22 de agosto 2026</title>
-    <link rel="icon" href="assets/diama-logo.png" />
-    <link
-      rel="preload"
-      href="assets/diama-stairs-clean.jpg"
-      as="image"
-      fetchpriority="high"
-    />
-    <link rel="stylesheet" href="styles.css?v=20260817-cellular" />
-  </head>
-  <body>
-    <main id="lobby" class="lobby">
-      <div class="lobby-photo" aria-hidden="true"></div>
-      <div class="lobby-wash" aria-hidden="true"></div>
-      <div class="grain" aria-hidden="true"></div>
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
 
-      <header class="lobby-header">
-        <span>Diama. × CENIZA</span>
-        <span>CDMX / 2026</span>
-      </header>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Merecida Burger | Te lo mereces</title>
+<meta name="description" content="Smash burgers hechas al momento en Atlacomulco de Fabela. Consulta el menú, promociones y pide por WhatsApp.">
+<meta name="theme-color" content="#171310">
+<meta property="og:type" content="website">
+<meta property="og:title" content="La Merecida Burger">
+<meta property="og:description" content="No vendemos burgers. Vendemos recompensas.">
+<link rel="preload" as="image" href="./assets/logo-la-merecida.png" type="image/png">
+<link rel="preload" as="image" href="./assets/clasica-doble.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Suez+One&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Suez+One&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"></noscript>
+  <style>
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; overflow-x: hidden; }
+    body { background: #171310; font-family: Ubuntu, 'Helvetica Neue', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #D81E2C; }
+    a:hover { color: #A80F1B; }
+    ::selection { background: #D81E2C; color: #F7EFE1; }
+    [data-carousel]::-webkit-scrollbar { display: none; }
+    .menu-catalog { max-width: 1080px; margin: 0 auto; padding: 4px 22px 0; box-sizing: border-box; }
+    .menu-group + .menu-group { margin-top: 42px; }
+    .menu-group-head { display: flex; align-items: end; justify-content: space-between; gap: 14px; margin-bottom: 14px; }
+    .menu-group-title { margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: clamp(27px, 6vw, 38px); color: #1A1A1A; }
+    .menu-group-count { margin: 0 0 4px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #A08A5F; white-space: nowrap; }
+    .menu-group-actions { display: flex; align-items: center; justify-content: flex-end; gap: 14px; }
+    .menu-nav { display: flex; gap: 8px; }
+    .menu-nav-button { width: 42px; height: 42px; border: 1px solid #C9BBA0; border-radius: 50%; background: #FFFCF4; color: #1A1A1A; font: 700 21px/1 Ubuntu, sans-serif; cursor: pointer; box-shadow: 0 6px 16px rgba(26,26,26,0.08); transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease; }
+    .menu-nav-button:hover { color: #F7EFE1; background: #D81E2C; border-color: #D81E2C; transform: translateY(-2px); }
+    .menu-nav-button:focus-visible { outline: 3px solid rgba(216,30,44,0.3); outline-offset: 2px; }
+    .product-row { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 2px 2px 18px; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-inline: contain; }
+    .product-row::-webkit-scrollbar { display: none; }
+    .product-card { flex: 0 0 min(72vw, 278px); scroll-snap-align: start; background: #FFFCF4; border: 1px solid #E8DCC3; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 30px rgba(26,26,26,0.07); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 18px 38px rgba(26,26,26,0.12); }
+    .product-photo { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; background: #EDE2CB; }
+    .product-info { padding: 15px 16px 17px; }
+    .product-name { min-height: 2.2em; margin: 0 0 12px; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.08; color: #1A1A1A; }
+    .product-order { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1.25px; text-transform: uppercase; color: #1A1A1A; text-decoration: none; border-bottom: 2px solid #D81E2C; padding-bottom: 2px; }
+    .product-order:hover { color: #D81E2C; }
+    @media (max-width: 620px) {
+      .menu-group-count { display: none; }
+      .menu-nav-button { width: 38px; height: 38px; }
+    }
+    @keyframes heroUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+    @keyframes stampIn { 0% { opacity: 0; transform: scale(2.4) rotate(16deg); } 62% { opacity: 1; transform: scale(0.9) rotate(-12deg); } 100% { opacity: 1; transform: scale(1) rotate(-9deg); } }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes waPulse { 0% { box-shadow: 0 10px 26px rgba(0,0,0,0.35), 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 10px 26px rgba(0,0,0,0.35), 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 10px 26px rgba(0,0,0,0.35), 0 0 0 0 rgba(37,211,102,0); } }
+  </style>
+</head>
+<body>
+<!-- ============ NAV STICKY ============ -->
+<nav data-screen-label="Nav" style="position: fixed; top: 0; left: 0; right: 0; z-index: 80; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 16px; background: rgba(23,19,16,0.62); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(247,239,225,0.08);">
+  <a href="#" aria-label="La Merecida Burger — inicio" style="display: block; color: #F7EFE1; text-decoration: none; line-height: 0; flex-shrink: 0;">
+    <img src="./assets/logo-la-merecida.png" alt="La Merecida" width="944" height="438" decoding="async" style="display: block; width: clamp(110px, 18vw, 148px); height: auto;">
+  </a>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <a href="#menu" style="font-family: Ubuntu, sans-serif; font-size: 14px; font-weight: 500; color: #F7EFE1; text-decoration: none;">Menú</a>
+    <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; color: #F7EFE1; text-decoration: none; background: #D81E2C; padding: 9px 16px; border-radius: 999px; white-space: nowrap;">Pide la tuya</a>
+  </div>
+</nav>
 
-      <section class="lobby-copy" aria-labelledby="lobby-title">
-        <p class="eyebrow">PRESENTAN</p>
-        <h1 id="lobby-title">Diama.<br />PENTHOUSE</h1>
-        <p class="lobby-date">SÁBADO 22 DE AGOSTO</p>
-      </section>
-
-      <div class="lobby-actions">
-        <button id="startRide" class="primary-button" type="button">
-          <span>SUBIR AL PENTHOUSE</span>
-          <span aria-hidden="true">↑</span>
-        </button>
-        <button id="enterSilent" class="text-button" type="button">ENTRAR SIN AUDIO</button>
+<!-- ============ 1 · HERO ============ -->
+<header data-screen-label="Hero" style="position: relative; min-height: 100dvh; background: #1A1A1A; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;">
+  <div style="position: absolute; inset: 0;">
+    <img src="./assets/clasica-doble.webp" alt="Clásica Doble de La Merecida Burger" width="900" height="900" fetchpriority="high" decoding="async" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;">
+  </div>
+  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,19,16,0.72) 0%, rgba(23,19,16,0.18) 42%, rgba(23,19,16,0.9) 84%); pointer-events: none;"></div>
+  <div style="position: relative; z-index: 2; padding: 110px 22px 96px; max-width: 1080px; width: 100%; margin: 0 auto; box-sizing: border-box; pointer-events: none;">
+    <p style="margin: 0 0 10px; font-family: Pacifico, cursive; font-size: clamp(18px, 4.6vw, 26px); color: #F7EFE1; opacity: 0; animation: heroUp 0.9s cubic-bezier(0.22,0.61,0.36,1) 0.15s both;">Smash burger house · Atlacomulco</p>
+    <div style="position: relative;">
+      <h1 style="margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: clamp(38px, 10.5vw, 92px); line-height: 1.02; color: #F7EFE1; text-wrap: balance;">
+        <span style="display: block; opacity: 0; animation: heroUp 0.9s cubic-bezier(0.22,0.61,0.36,1) 0.4s both;">No vendemos burgers.</span>
+        <span style="display: block; color: #E6303D; opacity: 0; animation: heroUp 0.9s cubic-bezier(0.22,0.61,0.36,1) 1.25s both;">Vendemos recompensas.</span>
+      </h1>
+      <div style="position: absolute; right: 2px; top: -66px; width: 88px; height: 88px; border-radius: 50%; background: #D81E2C; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; box-shadow: 0 12px 30px rgba(0,0,0,0.4); opacity: 0; animation: stampIn 0.55s cubic-bezier(0.34,1.56,0.64,1) 2.15s both;">
+        <div style="position: absolute; inset: 5px; border: 1.5px dashed rgba(247,239,225,0.8); border-radius: 50%;"></div>
+        <span style="font-size: 22px; line-height: 1;">🏅</span>
+        <span style="font-family: Pacifico, cursive; font-size: 11px; color: #F7EFE1;">te la ganaste</span>
       </div>
-    </main>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; opacity: 0; animation: heroUp 0.9s cubic-bezier(0.22,0.61,0.36,1) 1.9s both;">
+      <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." target="_blank" rel="noopener" style="pointer-events: auto; font-family: Ubuntu, sans-serif; font-weight: 700; font-size: 16px; color: #F7EFE1; text-decoration: none; background: #D81E2C; padding: 16px 28px; border-radius: 999px; box-shadow: 0 14px 34px rgba(216,30,44,0.38);">Pide la tuya</a>
+      <a href="#menu" style="pointer-events: auto; font-family: Ubuntu, sans-serif; font-weight: 500; font-size: 16px; color: #F7EFE1; text-decoration: none; border: 1.5px solid rgba(247,239,225,0.75); padding: 16px 28px; border-radius: 999px;">Ver menú</a>
+    </div>
+    <p style="margin: 18px 0 0; font-family: Ubuntu, sans-serif; font-size: 13px; color: rgba(247,239,225,0.75); opacity: 0; animation: heroUp 0.9s cubic-bezier(0.22,0.61,0.36,1) 2.1s both;">Mié – Dom · 8:00 am a 10:00 pm · Atlacomulco de Fabela</p>
+  </div>
+</header>
 
-    <main id="elevator" class="elevator" hidden>
-      <div class="elevator-destination" aria-hidden="true">
-        <span>Diama. × CENIZA</span>
-        <strong>Diama.<br />PENTHOUSE</strong>
-        <span>22.08.26 · CDMX</span>
+<!-- ============ MARQUEE ============ -->
+<div style="position: relative; z-index: 5; background: #D81E2C; transform: rotate(-1.2deg); margin: -16px -12px; padding: 11px 0; overflow: hidden;">
+  <div style="display: flex; width: max-content; animation: marquee 26s linear infinite;">
+    <div style="display: flex; align-items: center; gap: 26px; padding-right: 26px;">
+      <span style="font-family: 'Suez One', serif; font-size: 15px; letter-spacing: 2.5px; text-transform: uppercase; color: #F7EFE1; white-space: nowrap;">Te lo mereces</span><span style="font-size: 14px;">🏅</span>
+      <span style="font-family: 'Suez One', serif; font-size: 15px; letter-spacing: 2.5px; text-transform: uppercase; color: #F7EFE1; white-space: nowrap;">Jugosa · Calientita · Smash</span><span style="font-size: 14px;">🏅</span>
+      <span style="font-family: 'Suez One', serif; font-size: 15px; letter-spacing: 2.5px; text-transform: uppercase; color: #F7EFE1; white-space: nowrap;">Atlacomulco de Fabela</span><span style="font-size: 14px;">🏅</span>
+      <span style="font-family: 'Suez One', serif; font-size: 15px; letter-spacing: 2.5px; text-transform: uppercase; color: #F7EFE1; white-space: nowrap;">Esta no es una orden más</span><span style="font-size: 14px;">🏅</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 26px; padding-right: 26px;">
+      <span style="font-family: 'Suez One', serif; font-size: 15px; letter-spacing: 2.5px; text-transform: uppercase; color: #F7EFE1; white-space: nowrap;">Te lo mereces</span><span style="font-size: 14px;">🏅</span>
+      <span style="font-family: 'Suez One', serif; font-size: 15px; letter-spacing: 2.5px; text-transform: uppercase; color: #F7EFE1; white-space: nowrap;">Jugosa · Calientita · Smash</span><span style="font-size: 14px;">🏅</span>
+      <span style="font-family: 'Suez One', serif; font-size: 15px; letter-spacing: 2.5px; text-transform: uppercase; color: #F7EFE1; white-space: nowrap;">Atlacomulco de Fabela</span><span style="font-size: 14px;">🏅</span>
+      <span style="font-family: 'Suez One', serif; font-size: 15px; letter-spacing: 2.5px; text-transform: uppercase; color: #F7EFE1; white-space: nowrap;">Esta no es una orden más</span><span style="font-size: 14px;">🏅</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 2 · MANIFIESTO ============ -->
+<section data-screen-label="Manifiesto" style="background: #171310; padding: clamp(90px, 14vw, 150px) 22px; position: relative;">
+  <div style="max-width: 780px; margin: 0 auto;">
+    <p data-reveal="" style="margin: 0; font-family: Ubuntu, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #EE5560;">El manifiesto</p>
+    <p data-reveal="" style="margin: 16vh 0 0; font-family: 'Suez One', Georgia, serif; font-size: clamp(30px, 7.8vw, 58px); line-height: 1.14; color: #F7EFE1; text-wrap: pretty;">Cada burger es <span style="color: #E6303D;">el premio</span> de alguien que lo dio todo hoy.</p>
+    <p data-reveal="" style="margin: 34vh 0 0; font-family: 'Suez One', Georgia, serif; font-size: clamp(30px, 7.8vw, 58px); line-height: 1.14; color: #F7EFE1; text-wrap: pretty;">No competimos por ser los más baratos. Competimos por ser los que <span style="color: #E6303D;">mejor recompensan</span>.</p>
+    <p data-reveal="" style="margin: 34vh 0 0; font-family: 'Suez One', Georgia, serif; font-size: clamp(30px, 7.8vw, 58px); line-height: 1.14; color: #F7EFE1;">Esta no es <span style="text-decoration: line-through; text-decoration-color: #D81E2C; text-decoration-thickness: 4px;">una orden más</span>.</p>
+    <div data-reveal="" style="margin: 12vh 0 0; display: flex; align-items: center; gap: 16px;">
+      <p style="margin: 0; font-family: Pacifico, cursive; font-size: clamp(30px, 8vw, 54px); color: #E6303D; line-height: 1.2;">Es tu recompensa.</p>
+      <span style="font-size: clamp(26px, 6vw, 40px);">🏅</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · MENÚ DESTACADO ============ -->
+<section id="menu" data-screen-label="Menú" style="background: #F7EFE1; padding: clamp(72px, 11vw, 120px) 0 clamp(56px, 8vw, 96px);">
+  <div data-reveal="" style="max-width: 1080px; margin: 0 auto; padding: 0 22px; box-sizing: border-box; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px;">
+    <div>
+      <p style="margin: 0 0 6px; font-family: Pacifico, cursive; font-size: clamp(18px, 4.5vw, 24px); color: #D81E2C;">para ti, que te lo ganaste</p>
+      <h2 style="margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: clamp(44px, 12vw, 84px); line-height: 0.95; color: #1A1A1A;">El menú</h2>
+    </div>
+    <p style="margin: 0 0 6px; font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 500; color: #8A7B60; white-space: nowrap;">Desliza →</p>
+  </div>
+
+  <div data-carousel="" hidden aria-hidden="true" style="display: none;">
+
+    <!-- Clásica Doble (insignia) -->
+    <article style="flex-shrink: 0; width: min(84vw, 380px); scroll-snap-align: start; background: #FFFCF4; border: 1px solid #E8DCC3; border-radius: 20px; overflow: hidden; box-shadow: 0 16px 40px rgba(26,26,26,0.08);">
+      <div style="position: relative; aspect-ratio: 4 / 3; background: #EDE2CB;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu-clasica" shape="rect" placeholder="Foto: Clásica Doble" hint-size="100%,100%" style="width: 100%; height: 100%;"></x-import>
+        <span style="position: absolute; top: 12px; left: 12px; z-index: 2; pointer-events: none; background: #1A1A1A; color: #F7EFE1; font-family: Ubuntu, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 12px; border-radius: 999px;">🏅 La insignia</span>
+        <div data-seal="" style="position: absolute; top: 12px; right: 12px; z-index: 2; pointer-events: none; width: 72px; height: 72px; border-radius: 50%; background: #D81E2C; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: scale(0.4) rotate(18deg); transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);">
+          <span style="font-size: 18px; line-height: 1;">🏅</span>
+          <span style="font-family: Pacifico, cursive; font-size: 11px; color: #F7EFE1;">Merecida</span>
+        </div>
       </div>
-      <div class="elevator-photo" aria-hidden="true"></div>
-      <div class="elevator-door elevator-door-left" aria-hidden="true"></div>
-      <div class="elevator-door elevator-door-right" aria-hidden="true"></div>
-      <div class="grain" aria-hidden="true"></div>
-
-      <header class="elevator-header">
-        <span>ASCENSO EN CURSO</span>
-        <button id="toggleSound" type="button" aria-label="Silenciar audio">SOUND ON</button>
-      </header>
-
-      <section class="floor-display" aria-live="polite">
-        <span class="floor-arrow">↑</span>
-        <strong id="floorNumber">PB</strong>
-        <span class="floor-label">PISO</span>
-      </section>
-
-      <div class="ride-progress" aria-label="Progreso del elevador">
-        <span id="rideProgress"></span>
+      <div style="padding: 18px 18px 20px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <h3 style="margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 27px; color: #1A1A1A;">Clásica Doble</h3>
+          <span style="font-family: 'Suez One', Georgia, serif; font-size: 25px; color: #D81E2C; white-space: nowrap;">$145</span>
+        </div>
+        <p style="margin: 8px 0 14px; font-family: Ubuntu, sans-serif; font-size: 14.5px; line-height: 1.5; color: #5C5344;">Dos carnes smash, queso derretido, aderezo especial y verduras frescas recién cortadas.</p>
+        <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%3A%20Cl%C3%A1sica%20Doble" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A1A1A; text-decoration: none; border-bottom: 2px solid #D81E2C; padding-bottom: 2px;">Pedir ésta</a>
       </div>
+    </article>
 
-      <button id="skipRide" class="skip-button" type="button" hidden>OMITIR ASCENSO</button>
-    </main>
+    <!-- Lotus -->
+    <article style="flex-shrink: 0; width: min(74vw, 320px); scroll-snap-align: start; background: #FFFCF4; border: 1px solid #E8DCC3; border-radius: 20px; overflow: hidden;">
+      <div style="position: relative; aspect-ratio: 4 / 3; background: #EDE2CB;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu-lotus" shape="rect" placeholder="Foto: Lotus" hint-size="100%,100%" style="width: 100%; height: 100%;"></x-import>
+        <div data-seal="" style="position: absolute; top: 12px; right: 12px; z-index: 2; pointer-events: none; width: 72px; height: 72px; border-radius: 50%; background: #D81E2C; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: scale(0.4) rotate(18deg); transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);">
+          <span style="font-size: 18px; line-height: 1;">🏅</span>
+          <span style="font-family: Pacifico, cursive; font-size: 11px; color: #F7EFE1;">Merecida</span>
+        </div>
+      </div>
+      <div style="padding: 18px 18px 20px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <h3 style="margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 23px; color: #1A1A1A;">Lotus</h3>
+          <span style="font-family: 'Suez One', Georgia, serif; font-size: 22px; color: #D81E2C; white-space: nowrap;">$210</span>
+        </div>
+        <p style="margin: 8px 0 14px; font-family: Ubuntu, sans-serif; font-size: 14.5px; line-height: 1.5; color: #5C5344;">Tres carnes smash con cebolla, serranito y crema de galleta Lotus.</p>
+        <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%3A%20Lotus" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A1A1A; text-decoration: none; border-bottom: 2px solid #D81E2C; padding-bottom: 2px;">Pedir ésta</a>
+      </div>
+    </article>
 
-    <main id="invitation" class="invitation" hidden>
-      <nav class="site-nav" aria-label="Navegación principal">
-        <a href="#top">Diama. × CENIZA</a>
-        <div>
-          <a href="#ubicacion">UBICACIÓN</a>
-          <a href="#registro">REGISTRO</a>
-          <button id="toggleAmbience" type="button" aria-label="Silenciar ambiente">SOUND ON</button>
+    <!-- Bacon Cheese -->
+    <article style="flex-shrink: 0; width: min(74vw, 320px); scroll-snap-align: start; background: #FFFCF4; border: 1px solid #E8DCC3; border-radius: 20px; overflow: hidden;">
+      <div style="position: relative; aspect-ratio: 4 / 3; background: #EDE2CB;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu-bacon" shape="rect" placeholder="Foto: Bacon Cheese" hint-size="100%,100%" style="width: 100%; height: 100%;"></x-import>
+        <div data-seal="" style="position: absolute; top: 12px; right: 12px; z-index: 2; pointer-events: none; width: 72px; height: 72px; border-radius: 50%; background: #D81E2C; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: scale(0.4) rotate(18deg); transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);">
+          <span style="font-size: 18px; line-height: 1;">🏅</span>
+          <span style="font-family: Pacifico, cursive; font-size: 11px; color: #F7EFE1;">Merecida</span>
         </div>
-      </nav>
+      </div>
+      <div style="padding: 18px 18px 20px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <h3 style="margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 23px; color: #1A1A1A;">Bacon Cheese</h3>
+          <span style="font-family: 'Suez One', Georgia, serif; font-size: 22px; color: #D81E2C; white-space: nowrap;">$225</span>
+        </div>
+        <p style="margin: 8px 0 14px; font-family: Ubuntu, sans-serif; font-size: 14.5px; line-height: 1.5; color: #5C5344;">Doble smash con cheddar fundido y tocino crujiente. La recompensa pesada.</p>
+        <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%3A%20Bacon%20Cheese" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A1A1A; text-decoration: none; border-bottom: 2px solid #D81E2C; padding-bottom: 2px;">Pedir ésta</a>
+      </div>
+    </article>
 
-      <section id="top" class="hero-section">
-        <div class="hero-photo" aria-hidden="true"></div>
-        <div class="hero-color" aria-hidden="true"></div>
-        <div class="grain" aria-hidden="true"></div>
-        <div class="hero-topline">
-          <span>PRESENTAN</span>
-          <span>ÚLTIMO PISO · CDMX</span>
+    <!-- Sunset -->
+    <article style="flex-shrink: 0; width: min(74vw, 320px); scroll-snap-align: start; background: #FFFCF4; border: 1px solid #E8DCC3; border-radius: 20px; overflow: hidden;">
+      <div style="position: relative; aspect-ratio: 4 / 3; background: #EDE2CB;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu-sunset" shape="rect" placeholder="Foto: Sunset" hint-size="100%,100%" style="width: 100%; height: 100%;"></x-import>
+        <div data-seal="" style="position: absolute; top: 12px; right: 12px; z-index: 2; pointer-events: none; width: 72px; height: 72px; border-radius: 50%; background: #D81E2C; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: scale(0.4) rotate(18deg); transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);">
+          <span style="font-size: 18px; line-height: 1;">🏅</span>
+          <span style="font-family: Pacifico, cursive; font-size: 11px; color: #F7EFE1;">Merecida</span>
         </div>
-        <h1>Diama.<br />PENTHOUSE</h1>
-        <div class="hero-bottomline">
-          <strong>22</strong>
-          <span>AGOSTO<br />2026</span>
-          <a href="#registro">GENERAR ACCESO ↓</a>
+      </div>
+      <div style="padding: 18px 18px 20px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <h3 style="margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 23px; color: #1A1A1A;">Sunset</h3>
+          <span style="font-family: 'Suez One', Georgia, serif; font-size: 22px; color: #D81E2C; white-space: nowrap;">$195</span>
         </div>
-      </section>
+        <p style="margin: 8px 0 14px; font-family: Ubuntu, sans-serif; font-size: 14.5px; line-height: 1.5; color: #5C5344;">Doble smash con el toque dulce-salado que cierra el día como debe ser.</p>
+        <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%3A%20Sunset" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A1A1A; text-decoration: none; border-bottom: 2px solid #D81E2C; padding-bottom: 2px;">Pedir ésta</a>
+      </div>
+    </article>
 
-      <section class="manifesto-section">
-        <p class="section-index">01 / PENTHOUSE</p>
-        <h2>UNA OFICINA<br />HASTA QUE<br />CAE LA NOCHE.</h2>
-        <p class="manifesto-copy">
-          Diama. y Ceniza toman el último piso. Una noche suspendida sobre la ciudad.
-        </p>
-      </section>
+    <!-- Malteada Reese's -->
+    <article style="flex-shrink: 0; width: min(74vw, 320px); scroll-snap-align: start; background: #FFFCF4; border: 1px solid #E8DCC3; border-radius: 20px; overflow: hidden;">
+      <div style="position: relative; aspect-ratio: 4 / 3; background: #EDE2CB;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu-malteada" shape="rect" placeholder="Foto: Malteada Reese's" hint-size="100%,100%" style="width: 100%; height: 100%;"></x-import>
+        <div data-seal="" style="position: absolute; top: 12px; right: 12px; z-index: 2; pointer-events: none; width: 72px; height: 72px; border-radius: 50%; background: #D81E2C; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: scale(0.4) rotate(18deg); transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);">
+          <span style="font-size: 18px; line-height: 1;">🏅</span>
+          <span style="font-family: Pacifico, cursive; font-size: 11px; color: #F7EFE1;">Merecida</span>
+        </div>
+      </div>
+      <div style="padding: 18px 18px 20px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <h3 style="margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 23px; color: #1A1A1A;">Malteada Reese's</h3>
+          <span style="font-family: 'Suez One', Georgia, serif; font-size: 22px; color: #D81E2C; white-space: nowrap;">$95</span>
+        </div>
+        <p style="margin: 8px 0 14px; font-family: Ubuntu, sans-serif; font-size: 14.5px; line-height: 1.5; color: #5C5344;">Cremosa, espesa y con Reese's de verdad. El premio que se toma.</p>
+        <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%3A%20Malteada%20Reese%27s" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A1A1A; text-decoration: none; border-bottom: 2px solid #D81E2C; padding-bottom: 2px;">Pedir ésta</a>
+      </div>
+    </article>
 
-      <section class="lineup-section" aria-labelledby="lineup-title">
-        <div class="poster-column">
-          <img
-            src="assets/flyer-final.jpg"
-            alt="Flyer oficial de Diama. Penthouse con Fedra, Grupo Precario, íA, Caparroso, Firefly light y 1galgo"
-            loading="lazy"
-            decoding="async"
-            fetchpriority="low"
-          />
+    <!-- Merecidita -->
+    <article style="flex-shrink: 0; width: min(74vw, 320px); scroll-snap-align: start; background: #FFFCF4; border: 1px solid #E8DCC3; border-radius: 20px; overflow: hidden;">
+      <div style="position: relative; aspect-ratio: 4 / 3; background: #EDE2CB;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu-merecidita" shape="rect" placeholder="Foto: Merecidita (postre)" hint-size="100%,100%" style="width: 100%; height: 100%;"></x-import>
+        <span style="position: absolute; top: 12px; left: 12px; z-index: 2; pointer-events: none; background: rgba(26,26,26,0.75); color: #F7EFE1; font-family: Ubuntu, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 12px; border-radius: 999px;">Postre</span>
+        <div data-seal="" style="position: absolute; top: 12px; right: 12px; z-index: 2; pointer-events: none; width: 72px; height: 72px; border-radius: 50%; background: #D81E2C; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transform: scale(0.4) rotate(18deg); transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);">
+          <span style="font-size: 18px; line-height: 1;">🏅</span>
+          <span style="font-family: Pacifico, cursive; font-size: 11px; color: #F7EFE1;">Merecida</span>
         </div>
-        <div class="directory-column">
-          <p class="section-index">02 / DIRECTORIO</p>
-          <h2 id="lineup-title">LINEUP</h2>
-          <ol>
-            <li><span>06</span><strong>Fedra</strong></li>
-            <li><span>07</span><strong>Grupo Precario</strong></li>
-            <li><span>08</span><strong>íA</strong></li>
-            <li><span>09</span><strong>Caparroso</strong></li>
-            <li><span>10</span><strong>Firefly light</strong></li>
-            <li><span>PH</span><strong>1galgo</strong></li>
-          </ol>
+      </div>
+      <div style="padding: 18px 18px 20px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+          <h3 style="margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 23px; color: #1A1A1A;">Merecidita</h3>
+          <span style="font-family: 'Suez One', Georgia, serif; font-size: 22px; color: #D81E2C; white-space: nowrap;">$45</span>
         </div>
-      </section>
+        <p style="margin: 8px 0 14px; font-family: Ubuntu, sans-serif; font-size: 14.5px; line-height: 1.5; color: #5C5344;">El postre chiquito para cerrar tu recompensa como se debe.</p>
+        <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%3A%20Merecidita" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A1A1A; text-decoration: none; border-bottom: 2px solid #D81E2C; padding-bottom: 2px;">Pedir ésta</a>
+      </div>
+    </article>
 
-      <section id="ubicacion" class="location-section">
-        <div>
-          <p class="section-index">03 / UBICACIÓN</p>
-          <h2>ÚLTIMO<br />PISO</h2>
-        </div>
-        <div class="address-card">
-          <p>
-            AV. BAJA CALIFORNIA 284<br />
-            HIPÓDROMO CONDESA<br />
-            CUAUHTÉMOC, CDMX
-          </p>
-          <a
-            href="https://maps.app.goo.gl/8osywgt3agSPtbVd9?g_st=iw"
-            target="_blank"
-            rel="noreferrer"
-          >
-            ABRIR EN MAPS ↗
-          </a>
-        </div>
-      </section>
+    <!-- Ver menú completo -->
+    <div style="flex-shrink: 0; width: min(64vw, 260px); scroll-snap-align: start; border: 2px dashed #C9BBA0; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; box-sizing: border-box; text-align: center;">
+      <p style="margin: 0; font-family: 'Suez One', Georgia, serif; font-size: 23px; color: #1A1A1A; line-height: 1.2;">¿Con hambre de más?</p>
+      <a href="https://www.facebook.com/LaMerecida/" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-weight: 700; font-size: 14px; color: #F7EFE1; text-decoration: none; background: #D81E2C; padding: 13px 22px; border-radius: 999px;">Ver menú completo</a>
+    </div>
+  </div>
 
-      <section id="registro" class="registration-section">
-        <div class="registration-heading">
-          <p class="section-index">04 / ACCESO</p>
-          <h2>GENERA TU<br />BOLETO.</h2>
-          <p>
-            Tu nombre y token quedarán registrados. Guarda el boleto con una captura de pantalla.
-          </p>
-        </div>
-
-        <form id="registrationForm" class="registration-form">
-          <div class="field-group">
-            <label for="name">NOMBRE PARA LA LISTA</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              autocomplete="name"
-              placeholder="TU NOMBRE"
-              minlength="2"
-              maxlength="80"
-              required
-            />
+  <div class="menu-catalog" data-reveal="">
+    <section class="menu-group" aria-labelledby="menu-hamburguesas">
+      <div class="menu-group-head">
+        <h3 class="menu-group-title" id="menu-hamburguesas">Hamburguesas</h3>
+        <div class="menu-group-actions">
+          <p class="menu-group-count">14 opciones</p>
+          <div class="menu-nav" aria-label="Mover galería de hamburguesas">
+            <button class="menu-nav-button" type="button" aria-label="Ver productos anteriores" data-direction="-1">←</button>
+            <button class="menu-nav-button" type="button" aria-label="Ver más productos" data-direction="1">→</button>
           </div>
-          <div class="field-group">
-            <label for="instagram">INSTAGRAM · OPCIONAL</label>
-            <input
-              id="instagram"
-              name="instagram"
-              type="text"
-              autocomplete="off"
-              placeholder="@USUARIO"
-              maxlength="60"
-            />
+        </div>
+      </div>
+      <div class="product-row">
+        <article class="product-card"><img class="product-photo" src="./assets/clasica.webp" alt="Hamburguesa Clásica" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Clásica</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Clásica">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/clasica-doble.webp" alt="Hamburguesa Clásica Doble" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Clásica Doble</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Clásica Doble">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/clasica-super.webp" alt="Hamburguesa Clásica Súper" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Clásica Súper</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Clásica Súper">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/fit.webp" alt="Hamburguesa Fit" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Fit</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Fit">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/grilled.webp" alt="Hamburguesa Grilled" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Grilled</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Grilled">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/lotus.webp" alt="Hamburguesa Lotus" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Lotus</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Lotus">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/meat-and-cheese.webp" alt="Hamburguesa Meat and Cheese" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Meat and Cheese</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Meat and Cheese">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/ranch-burger.webp" alt="Ranch Burger" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Ranch Burger</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Ranch Burger">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/sunny-bacon.webp" alt="Hamburguesa Sunny Bacon" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Sunny Bacon</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Sunny Bacon">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/sunset.webp" alt="Hamburguesa Sunset" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Sunset</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Sunset">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/triple-bacon-cheese.webp" alt="Hamburguesa Triple Bacon Cheese" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Triple Bacon Cheese</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Triple Bacon Cheese">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/tributo-sencilla.webp" alt="Hamburguesa Tributo Sencilla" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Tributo Sencilla</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Tributo Sencilla">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/tributo-doble.webp" alt="Hamburguesa Tributo Doble" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Tributo Doble</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Tributo Doble">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/tributo-triple.webp" alt="Hamburguesa Tributo Triple" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Tributo Triple</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Tributo Triple">Pedir por WhatsApp</a></div></article>
+      </div>
+    </section>
+
+    <section class="menu-group" aria-labelledby="menu-baby">
+      <div class="menu-group-head">
+        <h3 class="menu-group-title" id="menu-baby">Baby burgers</h3>
+        <div class="menu-group-actions">
+          <p class="menu-group-count">6 opciones</p>
+          <div class="menu-nav" aria-label="Mover galería de Baby burgers">
+            <button class="menu-nav-button" type="button" aria-label="Ver productos anteriores" data-direction="-1">←</button>
+            <button class="menu-nav-button" type="button" aria-label="Ver más productos" data-direction="1">→</button>
           </div>
-          <input
-            class="honeypot"
-            type="text"
-            name="_gotcha"
-            tabindex="-1"
-            autocomplete="off"
-            aria-hidden="true"
-          />
-          <button id="submitRegistration" class="submit-button" type="submit">
-            <span>GENERAR MI ACCESO</span>
-            <span aria-hidden="true">↗</span>
-          </button>
-          <p id="formError" class="form-error" role="alert" hidden></p>
-          <p class="privacy-copy">
-            Al registrarte autorizas guardar estos datos únicamente para el acceso al evento.
-          </p>
-          <button id="restoreTicket" class="restore-ticket" type="button" hidden></button>
-        </form>
-      </section>
+        </div>
+      </div>
+      <div class="product-row">
+        <article class="product-card"><img class="product-photo" src="./assets/baby-clasica.webp" alt="Baby Clásica" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Baby Clásica</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Baby Clásica">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/baby-grilled.webp" alt="Baby Grilled" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Baby Grilled</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Baby Grilled">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/baby-lotus.webp" alt="Baby Lotus" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Baby Lotus</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Baby Lotus">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/baby-meat-and-cheese.webp" alt="Baby Meat and Cheese" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Baby Meat and Cheese</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Baby Meat and Cheese">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/baby-sunset.webp" alt="Baby Sunset" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Baby Sunset</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Baby Sunset">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/baby-tributo.webp" alt="Baby Tributo" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Baby Tributo</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Baby Tributo">Pedir por WhatsApp</a></div></article>
+      </div>
+    </section>
 
-      <footer class="site-footer">
-        <strong>NOS VEMOS<br />ARRIBA.</strong>
-        <div>
-          <span>Diama. × CENIZA</span>
-          <span>22.08.26 · CDMX</span>
+    <section class="menu-group" aria-labelledby="menu-fries">
+      <div class="menu-group-head">
+        <h3 class="menu-group-title" id="menu-fries">Fries</h3>
+        <div class="menu-group-actions">
+          <p class="menu-group-count">5 opciones</p>
+          <div class="menu-nav" aria-label="Mover galería de fries">
+            <button class="menu-nav-button" type="button" aria-label="Ver productos anteriores" data-direction="-1">←</button>
+            <button class="menu-nav-button" type="button" aria-label="Ver más productos" data-direction="1">→</button>
+          </div>
         </div>
-      </footer>
-    </main>
+      </div>
+      <div class="product-row">
+        <article class="product-card"><img class="product-photo" src="./assets/bacon-fries.webp" alt="Bacon Fries" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Bacon Fries</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Bacon Fries">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/cheese-fries.webp" alt="Cheese Fries" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Cheese Fries</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Cheese Fries">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/clasica-fries.webp" alt="Clásica Fries" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Clásica Fries</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Clásica Fries">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/merecida-fries.webp" alt="Merecida Fries" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Merecida Fries</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Merecida Fries">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/sweet-fries.webp" alt="Sweet Fries" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Sweet Fries</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Sweet Fries">Pedir por WhatsApp</a></div></article>
+      </div>
+    </section>
 
-    <div
-      id="ticketOverlay"
-      class="ticket-overlay"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Boleto de acceso Diama. Penthouse"
-      hidden
-    >
-      <article class="digital-ticket">
-        <div class="ticket-photo" aria-hidden="true"></div>
-        <div class="ticket-light" aria-hidden="true"></div>
-        <div class="ticket-grain" aria-hidden="true"></div>
-        <header class="ticket-header">
-          <span>Diama. × CENIZA</span>
-          <span>ACCESS / PH</span>
-        </header>
-        <div class="ticket-title">
-          <span>PRESENTAN</span>
-          <strong>Diama.<br />PENTHOUSE</strong>
+    <section class="menu-group" aria-labelledby="menu-postres">
+      <div class="menu-group-head">
+        <h3 class="menu-group-title" id="menu-postres">Postres</h3>
+        <div class="menu-group-actions">
+          <p class="menu-group-count">2 opciones</p>
+          <div class="menu-nav" aria-label="Mover galería de postres">
+            <button class="menu-nav-button" type="button" aria-label="Ver productos anteriores" data-direction="-1">←</button>
+            <button class="menu-nav-button" type="button" aria-label="Ver más productos" data-direction="1">→</button>
+          </div>
         </div>
-        <div class="ticket-event-line">
-          <strong>22</strong>
-          <span>AGOSTO<br />2026</span>
-          <span>CDMX<br />ÚLTIMO PISO</span>
-        </div>
-        <div class="ticket-holder">
-          <span>INVITADO</span>
-          <strong id="ticketName"></strong>
-        </div>
-        <div class="ticket-access">
+      </div>
+      <div class="product-row">
+        <article class="product-card"><img class="product-photo" src="./assets/pancake-clasico.webp" alt="Pancake Clásico" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Pancake Clásico</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Pancake Clásico">Pedir por WhatsApp</a></div></article>
+        <article class="product-card"><img class="product-photo" src="./assets/cheesecake-lotus.webp" alt="Cheesecake Lotus" width="900" height="900" loading="lazy" decoding="async"><div class="product-info"><h4 class="product-name">Cheesecake Lotus</h4><a class="product-order" href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." data-product="Cheesecake Lotus">Pedir por WhatsApp</a></div></article>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- ============ PROMOS DE LA SEMANA ============ -->
+<section id="promos" data-screen-label="Promos" style="background: #171310; padding: clamp(72px, 11vw, 120px) 22px;">
+  <div style="max-width: 1040px; margin: 0 auto;">
+    <div data-reveal="" style="margin-bottom: 30px;">
+      <p style="margin: 0 0 6px; font-family: Pacifico, cursive; font-size: clamp(18px, 4.5vw, 24px); color: #E6303D;">esta semana</p>
+      <h2 style="margin: 0; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: clamp(38px, 10vw, 72px); line-height: 1; color: #F7EFE1;">Promos de la semana</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px;">
+
+      <!-- Miércoles Merecido -->
+      <article data-reveal="" style="background: #221B14; border: 1px solid rgba(247,239,225,0.12); border-radius: 22px; padding: 28px 22px 24px; display: flex; flex-direction: column;">
+<img src="assets/promo-miercoles-merecido.webp" alt="Miércoles Merecido" loading="lazy" decoding="async" style="display: block; width: min(58vw, 250px); height: auto; margin: 0 auto 6px;">
+        <p style="margin: 0 0 8px; text-align: center; font-family: Ubuntu, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(247,239,225,0.55);">Solo los miércoles</p>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 16px 0 14px; border-top: 2px dashed rgba(247,239,225,0.16);">
           <div>
-            <span>ACCESS TOKEN</span>
-            <strong id="ticketToken"></strong>
+            <h3 style="margin: 0 0 4px; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 21px; color: #F7EFE1;">Combo MC</h3>
+            <p style="margin: 0; font-family: Ubuntu, sans-serif; font-size: 13.5px; line-height: 1.5; color: rgba(247,239,225,0.65);">Meat &amp; Cheese doble + cheese fries + barrilito</p>
           </div>
-          <img id="ticketQr" alt="Código QR individual del acceso" />
+          <div style="text-align: right; flex-shrink: 0;">
+            <p style="margin: 0; font-family: 'Suez One', Georgia, serif; font-size: 25px; color: #F6C64A; line-height: 1;">$219</p>
+            <p style="margin: 3px 0 0; font-family: Ubuntu, sans-serif; font-size: 13px; color: rgba(247,239,225,0.45); text-decoration: line-through;">$260</p>
+          </div>
         </div>
-        <footer class="ticket-footer">
-          <span>AV. BAJA CALIFORNIA 284</span>
-          <span>NON-TRANSFERABLE / RSVP CONFIRMED</span>
-        </footer>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 16px 0 14px; border-top: 2px dashed rgba(247,239,225,0.16);">
+          <div>
+            <h3 style="margin: 0 0 4px; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 21px; color: #F7EFE1;">Combo Malteada</h3>
+            <p style="margin: 0; font-family: Ubuntu, sans-serif; font-size: 13.5px; line-height: 1.5; color: rgba(247,239,225,0.65);">Triple Bacon + papitas + malteada</p>
+          </div>
+          <div style="text-align: right; flex-shrink: 0;">
+            <p style="margin: 0; font-family: 'Suez One', Georgia, serif; font-size: 25px; color: #F6C64A; line-height: 1;">$279</p>
+            <p style="margin: 3px 0 0; font-family: Ubuntu, sans-serif; font-size: 13px; color: rgba(247,239,225,0.45); text-decoration: line-through;">$315</p>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 16px 0 18px; border-top: 2px dashed rgba(247,239,225,0.16);">
+          <div>
+            <h3 style="margin: 0 0 4px; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 21px; color: #F7EFE1;">Combo Smash Doble</h3>
+            <p style="margin: 0; font-family: Ubuntu, sans-serif; font-size: 13.5px; line-height: 1.5; color: rgba(247,239,225,0.65);">2 clásicas dobles + clásicas fries + 2 refrescos 355 ml</p>
+          </div>
+          <div style="text-align: right; flex-shrink: 0;">
+            <p style="margin: 0; font-family: 'Suez One', Georgia, serif; font-size: 25px; color: #F6C64A; line-height: 1;">$379</p>
+            <p style="margin: 3px 0 0; font-family: Ubuntu, sans-serif; font-size: 13px; color: rgba(247,239,225,0.45); text-decoration: line-through;">$460</p>
+          </div>
+        </div>
+        <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20la%20promo%20de%20Mi%C3%A9rcoles%20Merecido." target="_blank" rel="noopener" style="margin-top: auto; align-self: flex-start; font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #F7EFE1; text-decoration: none; border-bottom: 2px solid #D81E2C; padding-bottom: 2px;">Pedir esta promo</a>
       </article>
 
-      <div id="ticketControls" class="ticket-controls">
-        <button id="screenshotMode" type="button">MODO SCREENSHOT</button>
-        <button id="closeTicket" type="button">CERRAR</button>
+      <!-- Jueves Smash -->
+      <article data-reveal="" data-delay="120" style="background: #F7EFE1; border-radius: 22px; padding: 28px 22px 24px; display: flex; flex-direction: column;">
+<img src="assets/promo-jueves-smash.webp" alt="Jueves Smash" loading="lazy" decoding="async" style="display: block; width: min(56vw, 240px); height: auto; margin: 8px auto 12px;">
+        <p style="margin: 0 0 8px; text-align: center; font-family: Ubuntu, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #A08A5F;">Solo los jueves</p>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 16px 0 14px; border-top: 2px dashed #D5C7A9;">
+          <div>
+            <h3 style="margin: 0 0 4px; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 21px; color: #1A1A1A;">Bacon Boy</h3>
+            <p style="margin: 0; font-family: Ubuntu, sans-serif; font-size: 13.5px; line-height: 1.5; color: #5C5344;">Bacon burger + Michelob Ultra</p>
+          </div>
+          <div style="text-align: right; flex-shrink: 0;">
+            <p style="margin: 0; font-family: 'Suez One', Georgia, serif; font-size: 25px; color: #D81E2C; line-height: 1;">$249</p>
+            <p style="margin: 3px 0 0; font-family: Ubuntu, sans-serif; font-size: 13px; color: #A08A5F; text-decoration: line-through;">$290</p>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 16px 0 14px; border-top: 2px dashed #D5C7A9;">
+          <div>
+            <h3 style="margin: 0 0 4px; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 21px; color: #1A1A1A;">Triple Shake</h3>
+            <p style="margin: 0; font-family: Ubuntu, sans-serif; font-size: 13.5px; line-height: 1.5; color: #5C5344;">3 malteadas: Reese's, queso y banana blueberry</p>
+          </div>
+          <div style="text-align: right; flex-shrink: 0;">
+            <p style="margin: 0; font-family: 'Suez One', Georgia, serif; font-size: 25px; color: #D81E2C; line-height: 1;">$249</p>
+            <p style="margin: 3px 0 0; font-family: Ubuntu, sans-serif; font-size: 13px; color: #A08A5F; text-decoration: line-through;">$290</p>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 16px 0 18px; border-top: 2px dashed #D5C7A9;">
+          <div>
+            <h3 style="margin: 0 0 4px; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: 21px; color: #1A1A1A;">Bacon Lovers</h3>
+            <p style="margin: 0; font-family: Ubuntu, sans-serif; font-size: 13.5px; line-height: 1.5; color: #5C5344;">2 bacon burgers + fries con tocino + 2 Michelob Ultra</p>
+          </div>
+          <div style="text-align: right; flex-shrink: 0;">
+            <p style="margin: 0; font-family: 'Suez One', Georgia, serif; font-size: 25px; color: #D81E2C; line-height: 1;">$599</p>
+            <p style="margin: 3px 0 0; font-family: Ubuntu, sans-serif; font-size: 13px; color: #A08A5F; text-decoration: line-through;">$685</p>
+          </div>
+        </div>
+        <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20la%20promo%20de%20Jueves%20Smash." target="_blank" rel="noopener" style="margin-top: auto; align-self: flex-start; font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A1A1A; text-decoration: none; border-bottom: 2px solid #D81E2C; padding-bottom: 2px;">Pedir esta promo</a>
+      </article>
+    </div>
+    <p data-reveal="" style="margin: 22px 0 0; font-family: Ubuntu, sans-serif; font-style: italic; font-size: 13.5px; color: rgba(247,239,225,0.7);">Las promos cambian cada semana — síguenos en <a href="https://www.instagram.com/lamerecidaburgermx" target="_blank" rel="noopener" style="color: #EE5560; font-style: normal; font-weight: 700; text-decoration: none;">Instagram</a> para cachar la próxima.</p>
+  </div>
+</section>
+
+<!-- ============ 4 · WALLY ============ -->
+<section id="wally" data-screen-label="Wally" style="background: #BE1220; padding: clamp(72px, 11vw, 120px) 22px;">
+  <div style="max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(32px, 6vw, 64px); align-items: center;">
+    <div data-reveal="">
+      <p style="margin: 0 0 6px; font-family: Ubuntu, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(247,239,225,0.8);">Programa de recompensas</p>
+      <h2 style="margin: 0 0 16px; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: clamp(34px, 8.5vw, 60px); line-height: 1.05; color: #F7EFE1; text-wrap: balance;">Colecciona lo que te mereces</h2>
+      <p style="margin: 0 0 22px; font-family: Ubuntu, sans-serif; font-size: 16.5px; line-height: 1.6; color: rgba(247,239,225,0.92); max-width: 46ch;">Cada pago digital te acerca a tu próxima recompensa. Sin apps raras: tu tarjeta de sellos vive en tu teléfono, como un pase de Wallet.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px;">
+        <span data-mile="4" style="font-family: Ubuntu, sans-serif; font-size: 13.5px; font-weight: 700; color: #F7EFE1; border: 1px solid rgba(247,239,225,0.4); background: rgba(247,239,225,0.12); padding: 9px 15px; border-radius: 999px; transition: all 0.4s ease;">4 sellos → premio</span>
+        <span data-mile="8" style="font-family: Ubuntu, sans-serif; font-size: 13.5px; font-weight: 700; color: #F7EFE1; border: 1px solid rgba(247,239,225,0.4); background: rgba(247,239,225,0.12); padding: 9px 15px; border-radius: 999px; transition: all 0.4s ease;">8 sellos → combo completo</span>
       </div>
-      <p id="cleanHint" class="clean-hint" hidden>TOMA TU SCREENSHOT · TOCA PARA VOLVER</p>
+      <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20unirme%20a%20Wally." target="_blank" rel="noopener" style="display: inline-block; font-family: Ubuntu, sans-serif; font-weight: 700; font-size: 16px; color: #F7EFE1; text-decoration: none; background: #1A1A1A; padding: 16px 28px; border-radius: 999px; box-shadow: 0 14px 30px rgba(0,0,0,0.25);">Únete a Wallet</a>
+      <p style="margin: 14px 0 0; font-family: Ubuntu, sans-serif; font-size: 13px; color: rgba(247,239,225,0.7);">Pídela en caja o mándanos WhatsApp.</p>
     </div>
 
-    <audio
-      id="elevatorAudio"
-      class="audio-engine"
-      src="assets/elevator-ambience.mp3"
-      preload="none"
-      playsinline
-    ></audio>
-    <audio
-      id="bellAudio"
-      class="audio-engine"
-      src="assets/elevator-bell.mp3"
-      preload="none"
-      playsinline
-    ></audio>
-    <audio
-      id="invitationAmbience"
-      class="audio-engine"
-      src="assets/dk-ambience.mp3"
-      preload="none"
-      playsinline
-      loop
-    ></audio>
+    <div data-reveal="" data-delay="150">
+<img src="assets/wally-pass.webp" alt="Tarjeta de sellos Wally de La Merecida en el Wallet del teléfono" loading="lazy" decoding="async" style="display: block; width: min(76vw, 330px); height: auto; margin: 0 auto; filter: drop-shadow(0 30px 50px rgba(0,0,0,0.35));">
+      
+      
+    </div>
+  </div>
+</section>
 
-    <script src="vendor/qrcode.min.js"></script>
-    <script src="script.js?v=20260817-cellular"></script>
-  </body>
+<!-- ============ 5 · RESEÑAS ============ -->
+<section id="resenas" data-screen-label="Reseñas" style="background: #F1E5CF; padding: clamp(72px, 11vw, 120px) 0 clamp(56px, 8vw, 96px);">
+  <div data-reveal="" style="max-width: 1080px; margin: 0 auto; padding: 0 22px; box-sizing: border-box; text-align: center;">
+    <p style="margin: 0 0 4px; font-family: Pacifico, cursive; font-size: clamp(18px, 4.5vw, 24px); color: #D81E2C;">la gente lo confirma</p>
+    <div style="display: flex; align-items: baseline; justify-content: center; gap: 14px; flex-wrap: wrap;">
+      <span style="font-family: 'Suez One', Georgia, serif; font-size: clamp(88px, 24vw, 150px); line-height: 0.95; color: #1A1A1A;">4.9</span>
+      <div style="text-align: left;">
+        <div style="color: #D81E2C; font-size: clamp(18px, 4.5vw, 26px); letter-spacing: 4px;">★★★★★</div>
+        <p style="margin: 4px 0 0; font-family: Ubuntu, sans-serif; font-size: 14px; font-weight: 500; color: #6B5E49;">calificación en Google</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-carousel="" data-reveal="" style="display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 30px 22px 26px; scrollbar-width: none; -webkit-overflow-scrolling: touch;">
+    <figure style="flex-shrink: 0; width: min(78vw, 340px); scroll-snap-align: start; margin: 0; background: #FFFCF4; border: 1px solid #E4D6B9; border-radius: 18px; padding: 20px 20px 18px; box-sizing: border-box; text-align: left;">
+      <span style="display: inline-block; font-family: Ubuntu, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #A08A5F; border: 1px dashed #C9BBA0; border-radius: 999px; padding: 4px 10px; margin-bottom: 12px;">Testimonio de ejemplo</span>
+      <blockquote style="margin: 0 0 14px; font-family: Ubuntu, sans-serif; font-style: italic; font-size: 15.5px; line-height: 1.55; color: #3D372C;">“El pan, la carne, todo. Se nota que no es una burger más.”</blockquote>
+      <figcaption style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <span style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; color: #1A1A1A;">Reseña de Google</span>
+        <span style="color: #D81E2C; font-size: 13px; letter-spacing: 2px;">★★★★★</span>
+      </figcaption>
+    </figure>
+    <figure style="flex-shrink: 0; width: min(78vw, 340px); scroll-snap-align: start; margin: 0; background: #FFFCF4; border: 1px solid #E4D6B9; border-radius: 18px; padding: 20px 20px 18px; box-sizing: border-box; text-align: left;">
+      <span style="display: inline-block; font-family: Ubuntu, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #A08A5F; border: 1px dashed #C9BBA0; border-radius: 999px; padding: 4px 10px; margin-bottom: 12px;">Testimonio de ejemplo</span>
+      <blockquote style="margin: 0 0 14px; font-family: Ubuntu, sans-serif; font-style: italic; font-size: 15.5px; line-height: 1.55; color: #3D372C;">“Fui por el antojo y me quedé por el trato. La malteada de Reese's, obligatoria.”</blockquote>
+      <figcaption style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <span style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; color: #1A1A1A;">Reseña de Google</span>
+        <span style="color: #D81E2C; font-size: 13px; letter-spacing: 2px;">★★★★★</span>
+      </figcaption>
+    </figure>
+    <figure style="flex-shrink: 0; width: min(78vw, 340px); scroll-snap-align: start; margin: 0; background: #FFFCF4; border: 1px solid #E4D6B9; border-radius: 18px; padding: 20px 20px 18px; box-sizing: border-box; text-align: left;">
+      <span style="display: inline-block; font-family: Ubuntu, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #A08A5F; border: 1px dashed #C9BBA0; border-radius: 999px; padding: 4px 10px; margin-bottom: 12px;">Testimonio de ejemplo</span>
+      <blockquote style="margin: 0 0 14px; font-family: Ubuntu, sans-serif; font-style: italic; font-size: 15.5px; line-height: 1.55; color: #3D372C;">“Vale cada peso. Es mi premio de los viernes.”</blockquote>
+      <figcaption style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <span style="font-family: Ubuntu, sans-serif; font-size: 13px; font-weight: 700; color: #1A1A1A;">Reseña de Google</span>
+        <span style="color: #D81E2C; font-size: 13px; letter-spacing: 2px;">★★★★★</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div data-reveal="" style="text-align: center; padding: 0 22px;">
+    <a href="https://www.google.com/maps/search/?api=1&query=La+Merecida+Burger+Atlacomulco+de+Fabela" target="_blank" rel="noopener" style="display: inline-block; font-family: Ubuntu, sans-serif; font-weight: 700; font-size: 15px; color: #1A1A1A; text-decoration: none; border: 2px solid #1A1A1A; padding: 14px 26px; border-radius: 999px;">Déjanos tu reseña ★</a>
+  </div>
+</section>
+
+<!-- ============ 6 · UBICACIÓN ============ -->
+<section id="ubicacion" data-screen-label="Ubicación" style="background: #171310; padding: clamp(72px, 11vw, 120px) 22px;">
+  <div style="max-width: 1040px; margin: 0 auto;">
+    <div data-reveal="">
+      <p style="margin: 0 0 6px; font-family: Pacifico, cursive; font-size: clamp(18px, 4.5vw, 24px); color: #E6303D;">ven por la tuya</p>
+      <h2 style="margin: 0 0 32px; font-family: 'Suez One', Georgia, serif; font-weight: 400; font-size: clamp(38px, 10vw, 72px); line-height: 1; color: #F7EFE1;">Estamos en Atlacomulco</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: clamp(26px, 5vw, 48px); align-items: start;">
+      <div data-reveal="" style="border-radius: 18px; overflow: hidden; border: 1px solid rgba(247,239,225,0.14);">
+        <iframe title="Mapa: La Merecida Burger" src="https://maps.google.com/maps?q=La%20Merecida%20Burger%2C%2020%20de%20Noviembre%20620%2C%20El%20Calvario%2C%20Atlacomulco%20de%20Fabela&amp;z=16&amp;output=embed" width="100%" height="330" style="border: 0; display: block; filter: saturate(0.85) contrast(1.02);" loading="lazy" allowfullscreen="true" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div data-reveal="" data-delay="120" style="display: flex; flex-direction: column; gap: 24px;">
+        <div>
+          <p style="margin: 0 0 6px; font-family: Ubuntu, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #EE5560;">Dirección</p>
+          <p style="margin: 0 0 6px; font-family: Ubuntu, sans-serif; font-size: 17px; line-height: 1.5; color: #F7EFE1;">20 de Noviembre 620, El Calvario,<br>50454 Atlacomulco de Fabela, Méx.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=La+Merecida+Burger+20+de+Noviembre+620+Atlacomulco+de+Fabela" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 14px; font-weight: 700; color: #EE5560; text-decoration: none;">Cómo llegar →</a>
+        </div>
+        <div>
+          <p style="margin: 0 0 6px; font-family: Ubuntu, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #EE5560;">Horario</p>
+          <p style="margin: 0; font-family: 'Suez One', Georgia, serif; font-size: 24px; color: #F7EFE1;">Miércoles a domingo</p>
+          <p style="margin: 2px 0 6px; font-family: 'Suez One', Georgia, serif; font-size: 24px; color: #F7EFE1;">8:00 am — 10:00 pm</p>
+          <p style="margin: 0; font-family: Ubuntu, sans-serif; font-size: 13.5px; color: rgba(247,239,225,0.65);">Lunes y martes descansamos — también nos lo merecemos.</p>
+        </div>
+        <div>
+          <p style="margin: 0 0 6px; font-family: Ubuntu, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #EE5560;">Teléfono</p>
+          <a href="tel:+527123298873" style="font-family: 'Suez One', Georgia, serif; font-size: 24px; color: #F7EFE1; text-decoration: none;">712 329 8873</a>
+        </div>
+        <div style="border: 1.5px dashed rgba(230,48,61,0.55); border-radius: 16px; padding: 18px 18px 20px;">
+          <p style="margin: 0 0 12px; font-family: Ubuntu, sans-serif; font-size: 14.5px; line-height: 1.55; color: rgba(247,239,225,0.92);"><span style="font-family: Pacifico, cursive; color: #E6303D; margin-right: 6px;">Aviso:</span>los fines de semana nos ganamos muchas visitas. Si no quieres esperar, pide para llevar o mándanos WhatsApp antes de venir.</p>
+          <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20para%20llevar." target="_blank" rel="noopener" style="display: inline-block; font-family: Ubuntu, sans-serif; font-weight: 700; font-size: 14px; color: #F7EFE1; text-decoration: none; background: #D81E2C; padding: 11px 20px; border-radius: 999px;">Pedir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 · FOOTER ============ -->
+<footer data-screen-label="Footer" style="background: #110E0B; padding: 56px 22px 100px; text-align: center; border-top: 1px solid rgba(247,239,225,0.07);">
+  <img src="./assets/logo-la-merecida.png" alt="La Merecida" width="944" height="438" loading="lazy" decoding="async" style="display: block; width: min(62vw, 250px); height: auto; margin: 0 auto;">
+  <p style="margin: 8px 0 0; font-family: Ubuntu, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(247,239,225,0.55);">Smash burger house · Atlacomulco</p>
+  <p style="margin: 22px 0 0; font-family: Pacifico, cursive; font-size: 20px; color: #E6303D;">Te lo mereces. 🏅</p>
+  <div style="display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin: 26px 0 0;">
+    <a href="https://www.instagram.com/lamerecidaburgermx" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 14px; font-weight: 500; color: #F7EFE1; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(247,239,225,0.35);">Instagram</a>
+    <a href="https://www.facebook.com/LaMerecida" target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 14px; font-weight: 500; color: #F7EFE1; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(247,239,225,0.35);">Facebook</a>
+    <a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." target="_blank" rel="noopener" style="font-family: Ubuntu, sans-serif; font-size: 14px; font-weight: 500; color: #F7EFE1; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(247,239,225,0.35);">WhatsApp</a>
+  </div>
+  <div style="border-top: 2px dashed rgba(247,239,225,0.14); max-width: 420px; margin: 30px auto 0; padding-top: 18px;">
+    <p style="margin: 0; font-family: Ubuntu, sans-serif; font-size: 12px; color: rgba(247,239,225,0.45);">© 2026 La Merecida Burger · Atlacomulco de Fabela, Estado de México</p>
+  </div>
+</footer>
+
+<!-- ============ FAB WHATSAPP ============ -->
+<a href="https://wa.me/527123298873?text=Hola%20%F0%9F%8F%85%20Quiero%20pedir%20mi%20Merecida." target="_blank" rel="noopener" aria-label="Pedir por WhatsApp" style="position: fixed; right: 18px; bottom: 18px; z-index: 90; width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: waPulse 3s ease-out infinite;">
+  <span style="display: block; width: 26px; height: 26px; background: #FFFFFF; border-radius: 50% 50% 50% 6px;"></span>
+</a>
+<script>
+(() => {
+  const phone = '527123298873';
+  const wa = (message) => 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+
+  document.querySelectorAll('.product-order[data-product]').forEach((link) => {
+    link.href = wa('Hola 🏅 Quiero pedir: ' + link.dataset.product);
+  });
+
+  document.querySelectorAll('.menu-nav-button').forEach((button) => {
+    button.addEventListener('click', () => {
+      const row = button.closest('.menu-group')?.querySelector('.product-row');
+      if (!row) return;
+      const direction = Number(button.dataset.direction) || 1;
+      row.scrollBy({ left: direction * Math.min(row.clientWidth * 0.82, 720), behavior: 'smooth' });
+    });
+  });
+
+  document.querySelectorAll('.product-row').forEach((row) => {
+    row.tabIndex = 0;
+    row.addEventListener('wheel', (event) => {
+      const max = row.scrollWidth - row.clientWidth;
+      if (max <= 1 || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      const canMove = (event.deltaY > 0 && row.scrollLeft < max - 1) || (event.deltaY < 0 && row.scrollLeft > 1);
+      if (!canMove) return;
+      event.preventDefault();
+      row.scrollLeft += event.deltaY;
+    }, { passive: false });
+    row.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const direction = event.key === 'ArrowRight' ? 1 : -1;
+      row.scrollBy({ left: direction * Math.min(row.clientWidth * 0.82, 720), behavior: 'smooth' });
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'none';
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('[data-reveal]').forEach((element) => {
+      if (element.getBoundingClientRect().top < window.innerHeight * 0.9) return;
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(28px)';
+      element.style.transition = 'opacity 0.8s cubic-bezier(0.22,0.61,0.36,1), transform 0.8s cubic-bezier(0.22,0.61,0.36,1)';
+      if (element.dataset.delay) element.style.transitionDelay = element.dataset.delay + 'ms';
+      observer.observe(element);
+    });
+  }
+})();
+</script>
+</body>
 </html>
